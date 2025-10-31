@@ -1,0 +1,198 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #303030;
+}
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  scroll-margin-top: 80px; /* Margem para compensar o header */
+}
+
+.limitar-secao {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.alinhar-items {
+  margin: 40px 50px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* CABEÇALHO */
+.topo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  border-bottom: solid 1px #eead2d;
+}
+
+.logo {
+  width: 140px;
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.menu a:link,
+.menu a:visited {
+  color: #303030;
+}
+
+.menu a:hover,
+.menu a:active {
+  color: #eead2d;
+}
+
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("/assets/bg-estacao.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+.banner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.texto-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-shadow: 1px 1px #000;
+}
+
+.texto-banner h1,
+.texto-banner h2 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.texto-banner h1 {
+  font-size: 70px;
+}
+
+.texto-banner h2 {
+  font-size: 40px;
+}
+
+/* SOBRE */
+
+.sobre-cidade p::first-letter {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.sobre-cidade p {
+  line-height: 30px;
+  padding-top: 30px;
+}
+
+/* PONTOS TURÍSTICOS */
+.pontos img,
+.pontos p {
+  margin-bottom: 30px;
+}
+.lista-pontos-turisticos {
+  list-style: none;
+  padding: 0;
+}
+.lista-pontos-turisticos li {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.lista-pontos-turisticos li::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/seta.png");
+  margin-left: -30px;
+  position: absolute;
+}
+/* GALERIA */
+.container-fotos img {
+  width: 300px;
+  height: 200px;
+  opacity: 0.6;
+}
+
+.container-fotos img:hover {
+  opacity: 1;
+}
+
+.container-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 3px;
+  column-gap: 5px;
+  justify-content: center;
+  max-width: 1024px;
+}
+
+/*RODAPE*/
+.rodape {
+  width: 100%;
+  background-color: #eead2d;
+  padding: 15px 0;
+}
+
+.rodape p {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
